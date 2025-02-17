@@ -1,0 +1,5 @@
+To prevent errors from accessing data before it's loaded, always ensure asynchronous operations are properly handled using promises or async/await.  Always check for data existence before accessing it. For example, use `.once('value')` with a callback to handle data after it's loaded instead of immediately accessing it.
+
+For transactions, implement proper error handling to catch and resolve potential conflicts or network failures, and ensure the transaction is designed correctly to handle all scenarios. Consider using conditional updates to prevent conflicts.
+
+Regarding data structures, carefully plan your data model to optimize for efficient querying. Avoid deeply nested structures whenever possible. Use Firebase's query capabilities to efficiently retrieve the specific data needed, without fetching unnecessary information.
